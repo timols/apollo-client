@@ -144,6 +144,9 @@
 - Add a default `gc` implementation to `ApolloCache`.  <br/>
   [@justinwaite](https://github.com/justinwaite) in [#5974](https://github.com/apollographql/apollo-client/pull/5974)
 
+- Apollo Client now supports setting a new `ApolloLink` (or link chain) after `new ApolloClient()` has been called, using the `ApolloClient.setLink()` method.  <br/>
+  [@hwillson](https://github.com/hwillson) in [#6193](https://github.com/apollographql/apollo-client/pull/6193)
+
 ### Bug Fixes
 
 - `useMutation` adjustments to help avoid an infinite loop / too many renders issue, caused by unintentionally modifying the `useState` based mutation result directly.  <br/>
