@@ -14,6 +14,7 @@ export namespace Cache {
     extends DataProxy.Query<TVariables> {
     dataId: string;
     result: TResult;
+    broadcast?: boolean;
   }
 
   export interface DiffOptions extends ReadOptions {
@@ -29,6 +30,7 @@ export namespace Cache {
     id: string;
     fieldName?: string;
     args?: Record<string, any>;
+    broadcast?: boolean;
   }
 
   export import DiffResult = DataProxy.DiffResult;
