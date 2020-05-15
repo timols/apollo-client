@@ -236,7 +236,7 @@ export function getStoreKeyName(
 
 export function argumentsObjectFromField(
   field: FieldNode | DirectiveNode,
-  variables: Object,
+  variables?: Record<string, any>,
 ): Object | null {
   if (field.arguments && field.arguments.length) {
     const argObj: Object = {};
@@ -245,7 +245,6 @@ export function argumentsObjectFromField(
     );
     return argObj;
   }
-
   return null;
 }
 
