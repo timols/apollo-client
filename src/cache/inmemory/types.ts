@@ -23,7 +23,7 @@ export declare type IdGetter = (
 export interface NormalizedCache {
   has(dataId: string): boolean;
   get(dataId: string, fieldName: string): StoreValue;
-  merge(dataId: string, incoming: StoreObject): void;
+  merge(dataId: string, incoming: StoreObject): StoreObject;
   clear(): void;
 
   // non-Map elements:
