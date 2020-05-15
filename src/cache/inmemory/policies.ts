@@ -122,11 +122,6 @@ export interface FieldFunctionOptions<
 
   variables?: TVars;
 
-  // In rare advanced use cases, a read or merge function may wish to
-  // consult the current Policies object, for example to call
-  // getStoreFieldName manually.
-  policies: Policies;
-
   // Utilities for dealing with { __ref } objects.
   isReference: typeof isReference;
   toReference: ToReferenceFunction;
@@ -678,7 +673,6 @@ function makeFieldFunctionOptions(
     fieldName,
     storeFieldName,
     variables,
-    policies,
     isReference,
     toReference,
     storage,

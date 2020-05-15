@@ -1940,11 +1940,9 @@ describe("type policies", function () {
                   args,
                   toReference,
                   isReference,
-                  policies,
                 }) {
                   expect(!existing || Object.isFrozen(existing)).toBe(true);
                   expect(typeof toReference).toBe("function");
-                  expect(policies).toBeInstanceOf(Policies);
                   const slice = existing.slice(
                     args!.offset,
                     args!.offset + args!.limit,
@@ -1957,11 +1955,9 @@ describe("type policies", function () {
                   args,
                   toReference,
                   isReference,
-                  policies,
                 }) {
                   expect(!existing || Object.isFrozen(existing)).toBe(true);
                   expect(typeof toReference).toBe("function");
-                  expect(policies).toBeInstanceOf(Policies);
                   const copy = existing ? existing.slice(0) : [];
                   const limit = args!.offset + args!.limit;
                   for (let i = args!.offset; i < limit; ++i) {
